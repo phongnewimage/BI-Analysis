@@ -16,7 +16,7 @@ with st.container():
     st.write("My Power BI Project : https://app.powerbi.com/home?redirectedFromSignup=1&ScenarioId=Signup&redirectedWaitSimple=1")
     st.write("Address : 04 Nguyen Dinh Chieu, DaKao Ward, District 1, Ho Chi Minh City, VietNam :flag-vn:")
 #---SQL---
-url= 'https://gitlab.com/username/repo/-/raw/master/data.xlsx'
+url= 'https://github.com/phongnewimage/BI-Analysis/blob/main/NewMember-Segment.xlsx'
 myfile = requests.get(url)
 df = pd.read_excel(myfile.content)
 print(df)
