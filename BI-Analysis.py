@@ -18,5 +18,3 @@ with st.container():
 #---SQL---
 url= 'https://github.com/phongnewimage/BI-Analysis/blob/main/NewMember-Segment.xlsx'
 df = pd.read_excel(url)
-df = pd.dataframe(df)
-st.write(df)
