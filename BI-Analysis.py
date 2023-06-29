@@ -10,8 +10,6 @@ from plotly.subplots import make_subplots
 #MainPage
 st.set_page_config(page_title="New Image Sale-Data",page_icon=":tada:",layout="wide")
     #----Header
-with open(r'D:\Python\Others\lottie\business.json',encoding='utf-8') as b:
- lottie_business = json.load(b)
 with st.columns(5)[-1]:
      st.image(image)
 with st.container():
