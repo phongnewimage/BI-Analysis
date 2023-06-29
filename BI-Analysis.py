@@ -16,4 +16,5 @@ with st.container():
     st.write("My Power BI Project : https://app.powerbi.com/home?redirectedFromSignup=1&ScenarioId=Signup&redirectedWaitSimple=1")
     st.write("Address : 04 Nguyen Dinh Chieu, DaKao Ward, District 1, Ho Chi Minh City, VietNam :flag-vn:")
 #---SQL---
+st.read("file:///D:/Python/Jupyter%20Notebook/Rate%20of%20Lastest%20LogIn%20Analysis.html")
 st.write('file:///D:/Python/Jupyter%20Notebook/Rate%20of%20Lastest%20LogIn%20Analysis.html')
