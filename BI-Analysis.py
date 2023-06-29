@@ -10,8 +10,6 @@ from plotly.subplots import make_subplots
 #MainPage
 st.set_page_config(page_title="New Image Sale-Data",page_icon=":tada:",layout="wide")
     #----Header
-with st.columns(5)[-1]:
-     st.image(image)
 with st.container():
     st.subheader("Hi, I am Phong :wave:")
     st.title("Business Analyst From New Image")
