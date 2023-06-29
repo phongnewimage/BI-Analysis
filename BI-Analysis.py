@@ -7,4 +7,19 @@ import urllib
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-st.write('Hello')
+image = Image.open('D:/Python/Templates/NI.png')
+#MainPage
+st.set_page_config(page_title="New Image Sale-Data",page_icon=":tada:",layout="wide")
+    #----Header
+with open(r'D:\Python\Others\lottie\business.json',encoding='utf-8') as b:
+ lottie_business = json.load(b)
+with st.columns(5)[-1]:
+     st.image(image)
+with st.container():
+    st.subheader("Hi, I am Phong :wave:")
+    st.title("Business Analyst From New Image")
+    st.write("I am happy to help you figure out something from my role to be more effective in our businesses :chart_with_upwards_trend:")
+    st.write("Phone : 0933 731709")
+    st.write("Email : phong.nguyenthanh@newimageasia.vn")
+    st.write("My Power BI Project : https://app.powerbi.com/home?redirectedFromSignup=1&ScenarioId=Signup&redirectedWaitSimple=1")
+    st.write("Address : 04 Nguyen Dinh Chieu, DaKao Ward, District 1, Ho Chi Minh City, VietNam :flag-vn:")
