@@ -16,5 +16,7 @@ with st.container():
     st.write("My Power BI Project : https://app.powerbi.com/home?redirectedFromSignup=1&ScenarioId=Signup&redirectedWaitSimple=1")
     st.write("Address : 04 Nguyen Dinh Chieu, DaKao Ward, District 1, Ho Chi Minh City, VietNam :flag-vn:")
 #---SQL---
-'file:///D:/Python/Jupyter%20Notebook/NewMember.html
-df = pd.read_html('https://newimageasia-my.sharepoint.com/:x:/r/personal/nivn_bi_newimageasia_vn/_layouts/15/Doc.aspx?sourcedoc=%7B16318BBB-A0A0-4C8F-87CF-AB69FB21A930%7D&file=NewMember-Segment.xlsx&action=default&mobileredirect=true')
+HtmlFile = open("test.html", 'r', encoding='utf-8')
+source_code = HtmlFile.read() 
+print(source_code)
+components.html(source_code)
