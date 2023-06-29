@@ -8,7 +8,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 #MainPage
-st.set_page_config(page_title="New Image Sale-Data",page_icon=":tada:",layout="wide")
+st.set_page_config(page_title="NI Data Science",page_icon=":tada:",layout="wide")
     #----Header
 with st.container():
     st.subheader("Hi, I am Phong :wave:")
