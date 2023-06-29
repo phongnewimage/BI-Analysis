@@ -2,7 +2,6 @@ import json
 import requests
 import streamlit as st
 import pandas as pd  # pip install pandas
-from streamlit_lottie import st_lottie
 import openpyxl
 import plotly.express as px
 import base64  # Standard Python Module
@@ -109,15 +108,5 @@ with st.container():
 df_title = pd.DataFrame(dat_title)
 st.table(df_title)
     #---Image
-st_lottie(
-    lottie_business,
-    speed=1,
-    reverse=False,
-    loop=True,
-    quality="low", # medium ; high
-    height=None,
-    width=None,
-    key=None,
-)
 cnn.commit()
 cnn.close()
