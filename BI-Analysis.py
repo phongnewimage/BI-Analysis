@@ -16,10 +16,4 @@ with st.container():
     st.write("My Power BI Project : https://app.powerbi.com/home?redirectedFromSignup=1&ScenarioId=Signup&redirectedWaitSimple=1")
     st.write("Address : 04 Nguyen Dinh Chieu, DaKao Ward, District 1, Ho Chi Minh City, VietNam :flag-vn:")
 #---SQL---
-def load_data():
-    url = 'https://newimageasia-my.sharepoint.com/:x:/r/personal/nivn_bi_newimageasia_vn/_layouts/15/Doc.aspx?sourcedoc=%7B16318BBB-A0A0-4C8F-87CF-AB69FB21A930%7D&file=NewMember-Segment.xlsx&action=default&mobileredirect=true'
-    html = pd.read_html(url,header=0)
-    df = html[0]
-    return df
-
-df = load_data()
+df = pd.read_html('https://newimageasia-my.sharepoint.com/:x:/r/personal/nivn_bi_newimageasia_vn/_layouts/15/Doc.aspx?sourcedoc=%7B16318BBB-A0A0-4C8F-87CF-AB69FB21A930%7D&file=NewMember-Segment.xlsx&action=default&mobileredirect=true')
