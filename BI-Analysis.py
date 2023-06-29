@@ -2,7 +2,6 @@ import json
 import requests
 import streamlit as st
 import pandas as pd  # pip install pandas
-import openpyxl
 import plotly.express as px
 import base64  # Standard Python Module
 from io import StringIO, BytesIO  # Standard Python Module
