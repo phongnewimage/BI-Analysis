@@ -16,46 +16,6 @@ from sqlalchemy import create_engine
 import urllib
 image = Image.open('D:/Python/Templates/NI.png')
 #encoding="utf-8"
-def generate_exceldh_download_link(df_dh):
-    #Credit Excel: https://discuss.streamlit.io/t/how-to-add-a-download-excel-csv-function-to-a-button/4474/5
-    towrite = BytesIO()
-    df_dh.to_excel(towrite,index=False, header=True)  # write to BytesIO buffer
-    towrite.seek(0)  # reset pointer
-    b64 = base64.b64encode(towrite.read()).decode()
-    href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" download="DH.xlsx">Download File-DH File</a>'
-    return st.markdown(href, unsafe_allow_html=True)
-def generate_excellv_download_link(df_lv):
-    #Credit Excel: https://discuss.streamlit.io/t/how-to-add-a-download-excel-csv-function-to-a-button/4474/5
-    towrite = BytesIO()
-    df_lv.to_excel(towrite,index=False, header=True)  # write to BytesIO buffer
-    towrite.seek(0)  # reset pointer
-    b64 = base64.b64encode(towrite.read()).decode()
-    href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" download="CB.xlsx">Download File-CB File</a>'
-    return st.markdown(href, unsafe_allow_html=True)
-def generate_excelcom_download_link(df_com):
-    #Credit Excel: https://discuss.streamlit.io/t/how-to-add-a-download-excel-csv-function-to-a-button/4474/5
-    towrite = BytesIO()
-    df_com.to_excel(towrite,index=False, header=True)  # write to BytesIO buffer
-    towrite.seek(0)  # reset pointer
-    b64 = base64.b64encode(towrite.read()).decode()
-    href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" download="HH.xlsx">Download File-HH File</a>'
-    return st.markdown(href, unsafe_allow_html=True)
-def generate_excelhiscom_download_link(df_hiscom):
-    #Credit Excel: https://discuss.streamlit.io/t/how-to-add-a-download-excel-csv-function-to-a-button/4474/5
-    towrite = BytesIO()
-    df_hiscom.to_excel(towrite,index=False, header=True)  # write to BytesIO buffer
-    towrite.seek(0)  # reset pointer
-    b64 = base64.b64encode(towrite.read()).decode()
-    href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" download="HH-History.xlsx">Download File-HH-History File</a>'
-    return st.markdown(href, unsafe_allow_html=True)
-def generate_excelmlm_download_link(df_mlm):
-    #Credit Excel: https://discuss.streamlit.io/t/how-to-add-a-download-excel-csv-function-to-a-button/4474/5
-    towrite = BytesIO()
-    df_mlm.to_excel(towrite,index=False, header=True)  # write to BytesIO buffer
-    towrite.seek(0)  # reset pointer
-    b64 = base64.b64encode(towrite.read()).decode()
-    href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" download="MLM.xlsx">Download File-MLM File</a>'
-    return st.markdown(href, unsafe_allow_html=True)
    #---Page
 conn_str = (
     r'DRIVER={ODBC Driver 17 for SQL Server};'
@@ -147,26 +107,7 @@ with st.container():
         st.header("DANH HIỆU")
         st.write("##")
 df_title = pd.DataFrame(dat_title)
-st.subheader('Downloads:')
-generate_exceldh_download_link(df_title)
-with st.container():
-    st.write("---")
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.header("CẤP BẬC THEO THÁNG TRONG NĂM")
-        st.write("##")
-df_level = pd.DataFrame(dat_level)
-st.subheader('Downloads:')
-generate_excellv_download_link(df_level)
-with st.container():
-    st.write("---")
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.header("HOA HỒNG THEO THÁNG TRONG NĂM")
-        st.write("##")
-df_com = pd.DataFrame(dat_com)
-st.subheader('Downloads:')
-generate_excelcom_download_link(df_com)
+st.table(df_title)
     #---Image
 st_lottie(
     lottie_business,
