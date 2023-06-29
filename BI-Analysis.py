@@ -15,3 +15,4 @@ with st.container():
     st.write("My Power BI Project : https://app.powerbi.com/home?redirectedFromSignup=1&ScenarioId=Signup&redirectedWaitSimple=1")
     st.write("Address : 04 Nguyen Dinh Chieu, DaKao Ward, District 1, Ho Chi Minh City, VietNam :flag-vn:")
 #---SQL---
+st.write('https://github.com/phongnewimage/BI-Analysis/blob/main/requirements.txt')
