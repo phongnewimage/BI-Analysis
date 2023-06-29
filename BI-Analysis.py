@@ -17,7 +17,6 @@ with st.container():
     st.write("Address : 04 Nguyen Dinh Chieu, DaKao Ward, District 1, Ho Chi Minh City, VietNam :flag-vn:")
 #---SQL---
 url= 'https://github.com/phongnewimage/BI-Analysis/blob/main/NewMember-Segment.xlsx'
-myfile = requests.get(url)
-df = pd.read_excel(myfile.content)
+df = pd.read_excel(url)
 df = pd.dataframe(df)
 st.write(df)
