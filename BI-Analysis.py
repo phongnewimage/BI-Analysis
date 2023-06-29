@@ -18,3 +18,13 @@ with st.container():
     st.write("Email : phong.nguyenthanh@newimageasia.vn")
     st.write("My Power BI Project : https://app.powerbi.com/home?redirectedFromSignup=1&ScenarioId=Signup&redirectedWaitSimple=1")
     st.write("Address : 04 Nguyen Dinh Chieu, DaKao Ward, District 1, Ho Chi Minh City, VietNam :flag-vn:")
+conn_str = (
+    r'DRIVER={ODBC Driver 17 for SQL Server};'
+    r'SERVER=HCM-SALES-LT-05;'
+    r'DATABASE=Monthly_Report;'
+    r'UID=sa;'
+    r'PWD=Image2023;'
+)
+quoted = urllib.parse.quote_plus(conn_str)
+engine = create_engine(f'mssql+pyodbc:///?odbc_connect={quoted}')
+cnn = engine.connect()
