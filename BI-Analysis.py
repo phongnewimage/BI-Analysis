@@ -15,3 +15,4 @@ with st.container():
     st.write("My Power BI Project : https://app.powerbi.com/home?redirectedFromSignup=1&ScenarioId=Signup&redirectedWaitSimple=1")
     st.write("Address : 04 Nguyen Dinh Chieu, DaKao Ward, District 1, Ho Chi Minh City, VietNam :flag-vn:")
 #---SQL---
+sale_current = pd.read_excel('D:/Master File/Sale-CYear/Sale-2023.xlsx')
