@@ -1,0 +1,9 @@
+plotly==5.15.0
+plotly-express==0.4.1
+pandas==2.0.2
+pyodbc==4.0.39
+SQLAlchemy==2.0.11
+pyecharts==2.0.3
+urllib3==2.0.2
+numpy==1.24.3
+openpyxl==3.1.2
