@@ -19,4 +19,4 @@ with st.container():
 url= 'https://github.com/phongnewimage/BI-Analysis/blob/main/NewMember-Segment.xlsx'
 myfile = requests.get(url)
 df = pd.read_excel(myfile.content)
-print(df)
+st.write(df)
