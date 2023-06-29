@@ -7,7 +7,6 @@ import urllib
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-image = Image.open('D:/Python/Templates/NI.png')
 #MainPage
 st.set_page_config(page_title="New Image Sale-Data",page_icon=":tada:",layout="wide")
     #----Header
